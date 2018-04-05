@@ -1,0 +1,17 @@
+{
+  "name": "point-of-interest-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run clean && npm run compile-ts && node ./compiled/index.js",
+    "clean": "rimraf compiled",
+    "compile-ts": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "typescript": "^2.8.1"
+  }
+}

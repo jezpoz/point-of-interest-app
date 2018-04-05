@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel ./public/index.html",
-    "compile-ts": "",
-    "clean": ""
+    "start": "npm run clean && npm run compile-ts && parcel ./public/index.html",
+    "compile-ts": "tsc",
+    "clean": "rimraf compiled dist"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +17,9 @@
     "@types/react-router-dom": "^4.2.6",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.7.0"
+    "parcel-bundler": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.8.1"
   },
   "dependencies": {
     "react": "^16.3.1",
