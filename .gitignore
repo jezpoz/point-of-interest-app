@@ -1,2 +1,5 @@
 frontend/node_modules
+frontend/compiled
+frontend/dist
+frontend/.cache
 frontend/package-lock.json
