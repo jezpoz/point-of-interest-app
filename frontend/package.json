@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && npm run compile-ts && parcel ./public/index.html",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "npm run clean && webpack-dev-server --mode development",
     "compile-ts": "tsc",
-    "clean": "rimraf compiled dist"
+    "clean": "rimraf dist"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +19,20 @@
     "@types/react-router-dom": "^4.2.6",
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.3",
     "rimraf": "^2.6.2",
-    "typescript": "^2.8.1"
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "bulma": "^0.6.2",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-router": "^4.2.0",
