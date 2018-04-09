@@ -7,14 +7,22 @@ module.exports = {
         path: __dirname + '/dist/',
         filename: 'app.js',
     },
+    devtool: "source-map",
+    resolve: {
+        extensions: [
+            ".ts", ".tsx", ".js", ".json",
+        ]
+    },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
+                loader: 'awesome-typescript-loader',
                 exclude: /node_modules/,
-            },
-            {
+            }, {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader",
+            }, {
                 test: /\.scss$/,
                 use: [{
                         loader: "style-loader",
@@ -30,8 +38,7 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
+            }, {
                 test: /\.sass$/,
                 use: [{
                         loader: "style-loader",
@@ -49,9 +56,6 @@ module.exports = {
                 ]
             }
         ]
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js"],
     },
     plugins: [
         new HtmlWebpackPlugin({

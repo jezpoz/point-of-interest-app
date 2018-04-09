@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export class HomeComponent extends React.Component {
     render(): JSX.Element {
@@ -6,6 +6,6 @@ export class HomeComponent extends React.Component {
             <h2 className={"subtitle"}>
                 Home
             </h2>
-        )
+        );
     }
 }

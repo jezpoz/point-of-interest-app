@@ -1,0 +1,15 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint:latest",
+        "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {
+        "member-access": false,
+        "ordered-imports": false,
+        "no-implicit-dependencies": false,
+    },
+    "rulesDirectory": []
+}

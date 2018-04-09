@@ -3,6 +3,7 @@ frontend/compiled
 frontend/dist
 frontend/.cache
 frontend/package-lock.json
+frontend/**/__snapshots__
 
 backend/node_modules
 backend/compiled
