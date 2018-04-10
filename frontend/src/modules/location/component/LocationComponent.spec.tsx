@@ -1,10 +1,10 @@
 import * as React from "react";
-import {HomeComponent} from "./HomeComponent";
+import {LocationComponent} from "./LocationComponent";
 import Renderer from "react-test-renderer";
 
 test("renders", () => {
     const component: Renderer.ReactTestRenderer = Renderer.create(
-        <HomeComponent/>,
+        <LocationComponent/>,
     );
     expect(component).toMatchSnapshot();
 });

@@ -4,8 +4,6 @@ import Renderer from "react-test-renderer";
 import {MemoryRouter} from 'react-router-dom';
 import {mount, configure} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import {NavBarComponent} from "./modules/navbar/component/NavBarComponent"
-import {RouterComponent} from "./routes/RouterComponent";
 
 configure({
     adapter: new Adapter(),
@@ -27,7 +25,5 @@ test("should render the router and navbar", () => {
             <App/>
         </MemoryRouter>
     );
-    expect(wrapper.find(NavBarComponent).length).toBe(1);
-    expect(wrapper.find(RouterComponent).length).toBe(1);
 });
 
