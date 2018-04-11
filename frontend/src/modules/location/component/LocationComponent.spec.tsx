@@ -1,10 +1,17 @@
 import * as React from "react";
 import {LocationComponent} from "./LocationComponent";
-import Renderer from "react-test-renderer";
+import enzyme from "../../../setupTests";
 
-test("renders", () => {
-    const component: Renderer.ReactTestRenderer = Renderer.create(
-        <LocationComponent/>,
+describe("Location component", () => {
+    const wrapper: enzyme.ShallowWrapper = enzyme.shallow(
+        <LocationComponent/>
     );
-    expect(component).toMatchSnapshot();
+
+    test("render the app", () => {
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    test('should render 4 buttons', () => {
+        expect(wrapper.find("button").length).toBe(4);
+    });
 });

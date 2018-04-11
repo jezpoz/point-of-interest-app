@@ -4,6 +4,7 @@ frontend/dist
 frontend/.cache
 frontend/package-lock.json
 frontend/**/__snapshots__
+frontend/coverage
 
 backend/node_modules
 backend/compiled

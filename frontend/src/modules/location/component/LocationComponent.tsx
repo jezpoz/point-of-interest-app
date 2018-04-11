@@ -10,10 +10,10 @@ export class LocationComponent extends React.Component {
                 <h2 className={"subtitle"}>
                     Locations
                 </h2>
-                <button onClick={LocationActionDispatcher.fetchLocations}>Fetch</button>
+                <button onClick={() => LocationActionDispatcher.fetchLocations()}>Fetch</button>
                 <button onClick={() => NavigationActionDispatcher.navigateTo("/about")}>About</button>
-                <button onClick={NavigationActionDispatcher.goBack}>Back</button>
-                <button onClick={NavigationActionDispatcher.goForward}>Forward</button>
+                <button onClick={() => NavigationActionDispatcher.goBack()}>Back</button>
+                <button onClick={() => NavigationActionDispatcher.goForward()}>Forward</button>
             </div>
         );
     }

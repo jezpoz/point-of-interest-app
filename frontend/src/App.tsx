@@ -22,9 +22,9 @@ export class App extends React.Component<IAppProps, IAppState> {
         return (
             <Provider store={store}>
                 <ConnectedRouter history={history}>
-                    <div>
-                    <Route path={"/"} exact={true} component={LocationComponent}/>
-                    <Route path={"/about"} exact={true} component={AboutComponent}/>
+                    <div id={"root-router"}>
+                        <Route path={"/"} exact={true} component={LocationComponent}/>
+                        <Route path={"/about"} exact={true} component={AboutComponent}/>
                     </div>
                 </ConnectedRouter>
             </Provider>

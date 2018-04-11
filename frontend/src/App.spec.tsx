@@ -1,29 +1,15 @@
 import * as React from "react";
 import {App} from "./App";
 import Renderer from "react-test-renderer";
-import {MemoryRouter} from 'react-router-dom';
-import {mount, configure} from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import enzyme from "./setupTests";
 
-configure({
-    adapter: new Adapter(),
-});
-
-let component: Renderer.ReactTestRenderer = Renderer.create(
-    <MemoryRouter initialEntries={["/"]} initialIndex={0}>
+describe("App component", () => {
+    const wrapper: enzyme.ShallowWrapper = enzyme.shallow(
         <App/>
-    </MemoryRouter>
-);
-
-test("should render correctly", () => {
-    expect(component).toMatchSnapshot();
-});
-
-test("should render the router and navbar", () => {
-    const wrapper = mount(
-        <MemoryRouter initialEntries={["/"]} initialIndex={0}>
-            <App/>
-        </MemoryRouter>
     );
+
+    test("render the component", () => {
+        expect(wrapper).toMatchSnapshot();
+    });
 });
 
