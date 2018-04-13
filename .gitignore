@@ -1,10 +1,18 @@
-frontend/node_modules
-frontend/compiled
-frontend/dist
-frontend/.cache
-frontend/package-lock.json
-frontend/**/__snapshots__
-frontend/coverage
+frontend_redux/node_modules
+frontend_redux/compiled
+frontend_redux/dist
+frontend_redux/.cache
+frontend_redux/package-lock.json
+frontend_redux/**/__snapshots__
+frontend_redux/coverage
+
+frontend_relay/node_modules
+frontend_relay/compiled
+frontend_relay/dist
+frontend_relay/.cache
+frontend_relay/package-lock.json
+frontend_relay/**/__snapshots__
+frontend_relay/coverage
 
 backend/node_modules
 backend/compiled
