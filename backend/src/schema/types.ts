@@ -1,20 +1,21 @@
-type LOCATION_TYPE = 'store' | 'location' | 'company';
+type LOCATION_TYPE = "store" | "location" | "company";
 
-export interface User {
-    userId: string;
+export interface IUser {
+    id: string;
+    displayName: string;
     firstName: string;
     lastName: string;
     email: string;
 }
 
-export interface Location {
-    locationId: string;
-    lat: number;
-    long: number;
+export interface ILocation {
+    id: string;
+    latitude: number;
+    longitude: number;
     name: string;
     locationType: LOCATION_TYPE;
     description: string;
     homepage: string;
-    addedByUser: User;
-    editedBy: [User];
+    addedByUser: IUser;
+    editedBy: [IUser];
 }

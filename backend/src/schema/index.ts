@@ -1,11 +1,10 @@
-import {makeExecutableSchema} from 'graphql-tools';
-import {resolvers} from './resolvers';
-import {readFileSync} from 'fs';
+import {GraphQLSchema} from "graphql"; 
+import {QueryObjectType as query} from "./query"
+import {MutationObjectType as mutation} from "./mutation";
+import {NodeInterface} from "./definitions/node";
 
-const typeDefs: string = readFileSync(__dirname + '/../../graphql-schema/schema.graphql').toString();
-
-export const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers,
+export const schema: GraphQLSchema = new GraphQLSchema({
+    query,
+    mutation,
 });
 
